@@ -1,4 +1,5 @@
 {
   "jwtPrivateKey": "",
-  "db": "mongodb://mdrisk:Matt85hershey@ds163300.mlab.com:63300/rrpodcast"
+  "db":
+    "mongodb://mdrisk:Matt85hershey@ds163300.mlab.com:63300/rrpodcast?authMechanism=SCRAM-SHA-1"
 }
