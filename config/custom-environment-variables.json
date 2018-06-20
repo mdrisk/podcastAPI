@@ -1,0 +1,4 @@
+{
+  "jwtPrivateKey": "podcast_jwtPrivateKey",
+  "db": "mongodb://localhost/podcast"
+}
