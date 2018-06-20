@@ -1,5 +1,5 @@
 {
   "jwtPrivateKey": "",
   "db":
-    "mongodb://mdrisk:Matt85hershey@ds163300.mlab.com:63300/rrpodcast?authSource=rrpodcast&w=1"
+    "mongodb://mdrisk:mdrisk85@ds163300.mlab.com:63300/rrpodcast?authSource=rrpodcast&w=1"
 }
