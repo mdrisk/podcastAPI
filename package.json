@@ -4,6 +4,7 @@
   "description": "API for podcast website",
   "main": "index.js",
   "scripts": {
+    "start": "node server.js",
     "test": "test"
   },
   "author": "Matt Risk",
