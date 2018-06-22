@@ -2261,7 +2261,8 @@ router.get("/populate", async (req, res) => {
 //delete
 router.put("/:id", async (req, res) => {
   const obj = await Collection.findById(req.params.id);
-  const cat = obj.category;
+  if (!obj) return res.status(404).send("collection not found");
+
   const collection = await Collection.findByIdAndUpdate(
     req.params.id,
     {
