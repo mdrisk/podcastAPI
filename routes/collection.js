@@ -2231,14 +2231,14 @@ const objVerbs = [
   "Use"
 ];
 
-const grouping = {
-  locArray: locArray,
-  locAdj: locAdj,
-  peepAdj: peepAdj,
-  race: race,
-  occupation: occupation,
-  objVerbs: objVerbs
-};
+const grouping = [
+  { locArray: locArray },
+  { locAdj: locAdj },
+  { peepAdj: peepAdj },
+  { race: race },
+  { occupation: occupation },
+  { objVerbs: objVerbs }
+];
 
 router.get("/", async (req, res) => {
   await Collection.collection.remove();
