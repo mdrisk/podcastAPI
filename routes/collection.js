@@ -2267,7 +2267,7 @@ router.put("/:id", async (req, res) => {
   obj.name = arr;
   console.log(obj);
   await obj.save();
-  res.send(arr);
+  res.send(name);
 });
 // //get one
 // router.get("/:id", async (req, res) => {
