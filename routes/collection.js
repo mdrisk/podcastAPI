@@ -2271,7 +2271,7 @@ router.put("/:id", async (req, res) => {
     { new: true }
   );
 
-  res.send(collection);
+  res.send(obj.category);
 });
 // //get one
 // router.get("/:id", async (req, res) => {
