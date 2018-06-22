@@ -1067,7 +1067,7 @@ const locArray = [
   "Zoo"
 ];
 
-const locadj = [
+const locAdj = [
   "Pure",
   "Unconscious",
   "Romantic",
@@ -1111,7 +1111,7 @@ const locadj = [
   "Violent"
 ];
 
-const peepadj = [
+const peepAdj = [
   "able",
   "abnormal",
   "absent-minded",
@@ -2101,7 +2101,7 @@ const occupation = [
   "Zoologist"
 ];
 
-const objverbs = [
+const objVerbs = [
   "Advise",
   "Analyze",
   "Apply",
@@ -2233,11 +2233,11 @@ const objverbs = [
 
 const grouping = {
   locArray: locArray,
-  locadj: locadj,
-  peepadj: peepAdj,
+  locAdj: locAdj,
+  peepAdj: peepAdj,
   race: race,
   occupation: occupation,
-  objverbs: objverbs
+  objVerbs: objVerbs
 };
 
 router.get("/", async (req, res) => {
