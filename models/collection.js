@@ -2,8 +2,7 @@ const mongoose = require("mongoose");
 
 const collectionSchema = new mongoose.Schema({
   collectionName: {
-    type: String,
-    required: true
+    type: String
   }
 });
 const Collection = mongoose.model("Collection", collectionSchema);
