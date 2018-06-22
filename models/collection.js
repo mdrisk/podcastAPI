@@ -1,9 +1,8 @@
 const mongoose = require("mongoose");
 
 const collectionSchema = new mongoose.Schema({
-  collectionName: {
-    type: String
-  }
+  category: String,
+  list: [String]
 });
 const Collection = mongoose.model("Collection", collectionSchema);
 
