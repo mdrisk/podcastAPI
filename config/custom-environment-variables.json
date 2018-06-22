@@ -2,4 +2,5 @@
   "jwtPrivateKey": "podcast_jwtPrivateKey",
   "db":
     "mongodb://mdrisk:mdrisk85@ds163300.mlab.com:63300/rrpodcast?authSource=rrpodcast&w=1"
+  /* "mongodb://localhost/podcastApi" */
 }
