@@ -2263,10 +2263,11 @@ router.put("/:id", async (req, res) => {
   const obj = await Collection.findById(req.params.id);
   const name = obj.category;
   console.log(name);
-  obj.name = req.body.arr;
+  const arr = req.body.arr;
+  obj.name = arr;
   console.log(obj);
   await obj.save();
-  res.send(obj);
+  res.send(arr);
 });
 // //get one
 // router.get("/:id", async (req, res) => {
