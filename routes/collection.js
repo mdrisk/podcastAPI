@@ -2232,12 +2232,12 @@ const objVerbs = [
 ];
 
 const grouping = [
-  { category: "locArray", locArray: locArray },
-  { category: "locAdj", locAdj: locAdj },
-  { category: "peepAdj", peepAdj: peepAdj },
-  { category: "race", race: race },
-  { category: "occupation", occupation: occupation },
-  { category: "objVerbs", objVerbs: objVerbs }
+  { category: "locArray", list: locArray },
+  { category: "locAdj", list: locAdj },
+  { category: "peepAdj", list: peepAdj },
+  { category: "race", list: race },
+  { category: "occupation", list: occupation },
+  { category: "objVerbs", list: objVerbs }
 ];
 
 router.get("/", async (req, res) => {
@@ -2261,13 +2261,17 @@ router.get("/populate", async (req, res) => {
 //delete
 router.put("/:id", async (req, res) => {
   const obj = await Collection.findById(req.params.id);
-  const name = obj.category;
-  console.log(name);
-  const arr = req.body.arr;
-  obj[name] = arr;
-  console.log(obj);
-  await obj.save();
-  res.send(name);
+
+  const collection = await Collection.findByIdAndUpdate(
+    req.params.id,
+    {
+      category: obj.category,
+      list: req.body.arr
+    },
+    { new: true }
+  );
+
+  res.send(collection);
 });
 // //get one
 // router.get("/:id", async (req, res) => {
