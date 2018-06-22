@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
 
 const locationSchema = new mongoose.Schema({
-  name: {
-    type: [{ category: String, name: String }],
+  collectionName: {
+    type: String,
     required: true
   }
 });

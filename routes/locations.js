@@ -1078,8 +1078,8 @@ router.get("/", async (req, res) => {
     return { category: "location", name: loc };
   });
   await Location.collection.insert({
-    name: "location",
-    locations: generatedLists
+    collectionName: "location",
+    locationArray: generatedLists
   });
   //get all
 
