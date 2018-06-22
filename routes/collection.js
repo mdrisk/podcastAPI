@@ -2263,7 +2263,7 @@ router.delete("/:id", async (req, res) => {
   const obj = await Location.findById(req.params.id);
   let name = obj.category;
   obj.name = req.body.arr;
-  obj.save();
+  await obj.save();
   res.send(obj);
 });
 // //get one
