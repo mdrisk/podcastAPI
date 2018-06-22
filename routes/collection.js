@@ -2265,7 +2265,7 @@ router.put("/:id", async (req, res) => {
   coll.set({ list: req.body.arr });
   coll.save();
 
-  res.send(coll);
+  res.send(req.body.arr);
 });
 // //get one
 // router.get("/:id", async (req, res) => {
