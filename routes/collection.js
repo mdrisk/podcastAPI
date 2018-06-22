@@ -2232,12 +2232,12 @@ const objVerbs = [
 ];
 
 const grouping = [
-  { locArray: locArray },
-  { locAdj: locAdj },
-  { peepAdj: peepAdj },
-  { race: race },
-  { occupation: occupation },
-  { objVerbs: objVerbs }
+  { category: "locArray", locArray: locArray },
+  { category: "locAdj", locAdj: locAdj },
+  { category: "peepAdj", peepAdj: peepAdj },
+  { category: "race", race: race },
+  { category: "occupation", occupation: occupation },
+  { category: "objVerbs", objVerbs: objVerbs }
 ];
 
 router.get("/", async (req, res) => {
