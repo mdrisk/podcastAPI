@@ -1074,12 +1074,12 @@ router.get("/", async (req, res) => {
     "Youth Center ",
     "Zoo"
   ];
-  const generatedLists = locArray.map(loc => {
-    return { category: "location", name: loc };
-  });
+  // const generatedLists = locArray.map(loc => {
+  //   return {name:loc};
+  // });
   await Location.collection.insert({
     collectionName: "location",
-    locationArray: generatedLists
+    locationArray: locArray
   });
   //get all
 
