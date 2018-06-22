@@ -2231,7 +2231,7 @@ const objverbs = [
   "Use"
 ];
 
-const grouping = [
+const grouping ={
   {
     collectionName: "locArray",
     locArray: locArray
@@ -2256,7 +2256,7 @@ const grouping = [
     collectionName: "objverbs",
     objverbs: objverbs
   }
-];
+};
 
 router.get("/", async (req, res) => {
   await Collection.collection.remove();
