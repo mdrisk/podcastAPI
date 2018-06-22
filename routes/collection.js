@@ -1,11 +1,11 @@
 const express = require("express");
 const router = express.Router();
 const mongoose = require("mongoose");
-const { Location } = require("../models/locations");
+const { Collection } = require("../models/collection");
 // const auth = require("../middleware/auth");
 
 router.get("/", async (req, res) => {
-  await Location.collection.remove();
+  await Collection.collection.remove();
 
   const locArray = [
     "Abandoned Factory ",
@@ -1077,8 +1077,8 @@ router.get("/", async (req, res) => {
   });
 
   //get all
-  const locations = await Location.find();
-  res.send(locations);
+  const collection = await Collection.find();
+  res.send(collection);
 });
 
 // //get one
