@@ -2241,15 +2241,31 @@ const grouping = [
 ];
 
 router.get("/", async (req, res) => {
-  await Collection.collection.remove();
-
-  await Collection.collection.insertMany(grouping);
+  // await Collection.collection.remove();
+  //
+  // await Collection.collection.insertMany(grouping);
 
   //get all
   const collection = await Collection.find();
   res.send(collection);
 });
 
+//clear and repopulate db - testing only!
+router.get("/populate", async (req, res) => {
+  await Collection.collection.remove();
+  await Collection.collection.insertMany(grouping);
+  const collection = await Collection.find();
+  res.send(collection);
+});
+
+//delete
+router.delete("/:id", async (req, res) => {
+  const obj = await Location.findById(req.params.id);
+  let name = obj.category;
+  obj.name = req.body.arr;
+  obj.save();
+  res.send(obj);
+});
 // //get one
 // router.get("/:id", async (req, res) => {
 //   const location = await Location.findById(req.params.id);
@@ -2271,14 +2287,6 @@ router.get("/", async (req, res) => {
 //   res.send(location);
 // });
 
-// //delete
-// router.delete("/:id", async (req, res) => {
-//   const location = await Location.findByIdAndRemove(req.params.id);
-//
-//   if (!location)
-//     return res.status(404).send("The location with this ID was not found...");
-//   res.send(location);
-// });
 //new
 // router.post("/", async (req, res) => {
 //   const location = new Location({
