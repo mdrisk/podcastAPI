@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const mongoose = require("mongoose");
 const { Collection } = require("../models/collection");
-// const auth = require("../middleware/auth");
+
 const locArray = [
   "Abandoned Factory ",
   "Abandoned Mine ",
@@ -2263,7 +2263,7 @@ router.put("/:id", async (req, res) => {
   const coll = await Collection.findById(req.params.id);
   const data = req.body.arr;
   if (!coll) return res.status(404).send("collection not updated");
-  await Collection.collection.update(
+  const newColl = await coll.update(
     { _id: req.params.id },
     {
       $set: {
@@ -2271,7 +2271,7 @@ router.put("/:id", async (req, res) => {
       }
     }
   );
-  const newColl = await Collection.findById(req.params.id);
+
   res.send(newColl);
 });
 // //get one
