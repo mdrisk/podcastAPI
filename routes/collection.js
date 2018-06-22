@@ -2261,11 +2261,12 @@ router.get("/populate", async (req, res) => {
 //delete
 router.put("/:id", async (req, res) => {
   const coll = await Collection.findById(req.params.id);
+  const data = req.body.arr;
   if (!coll) return res.status(404).send("collection not updated");
-  coll.set({ list: req.body.arr });
+  coll.set({ list: data });
   coll.save();
 
-  res.send(req.body.arr);
+  res.send(coll);
 });
 // //get one
 // router.get("/:id", async (req, res) => {
