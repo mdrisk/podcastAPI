@@ -2263,10 +2263,16 @@ router.put("/:id", async (req, res) => {
   const coll = await Collection.findById(req.params.id);
   const data = req.body.arr;
   if (!coll) return res.status(404).send("collection not updated");
-  coll.set({ list: data });
-  coll.save();
-
-  res.send(coll);
+  await Collection.update(
+    { _id: req.params.id },
+    {
+      $set: {
+        list: data
+      }
+    }
+  );
+  const newColl = await Collection.findById(req.params.id);
+  res.send(newColl);
 });
 // //get one
 // router.get("/:id", async (req, res) => {
