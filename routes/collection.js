@@ -1071,7 +1071,7 @@ router.get("/", async (req, res) => {
     "Zoo"
   ];
 
-  await Location.collection.insert({
+  await Collection.collection.insert({
     collectionName: "location",
     locationArray: locArray
   });
