@@ -2263,7 +2263,7 @@ router.put("/:id", async (req, res) => {
   const coll = await Collection.findById(req.params.id);
   const data = req.body.arr;
   if (!coll) return res.status(404).send("collection not updated");
-  await Collection.update(
+  await Collection.collection.update(
     { _id: req.params.id },
     {
       $set: {
