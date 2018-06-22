@@ -9,7 +9,7 @@ const { Location } = require("../models/locations");
 //delete locations
 //update locations
 router.get("/", async (req, res) => {
-  // await Location.collection.remove();
+  await Location.collection.remove();
 
   const locArray = [
     "Abandoned Factory ",
@@ -1077,7 +1077,10 @@ router.get("/", async (req, res) => {
   const generatedLists = locArray.map(loc => {
     return { category: "location", name: loc };
   });
-  await Location.collection.insert({ locations: generatedLists });
+  await Location.collection.insert({
+    name: "location",
+    locations: generatedLists
+  });
   //get all
 
   const locations = await Location.find().sort("name");
