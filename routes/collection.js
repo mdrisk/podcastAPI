@@ -2260,7 +2260,7 @@ router.get("/populate", async (req, res) => {
 
 //delete
 router.delete("/:id", async (req, res) => {
-  const obj = await Location.findById(req.params.id);
+  const obj = await Collection.findById(req.params.id);
   let name = obj.category;
   obj.name = req.body.arr;
   await obj.save();
