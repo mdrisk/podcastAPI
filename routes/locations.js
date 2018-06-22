@@ -1073,12 +1073,12 @@ const locArray = [
   "Zoo"
 ];
 const generatedLists = locArray.map(loc => {
-  return { name: loc };
+  return { category: "location", name: loc };
 });
 
 //get all
 router.get("/", async (req, res) => {
-  // await Location.collection.insertMany(generatedLists);
+  await Location.collection.insertMany(generatedLists);
 
   const locations = await Location.find().sort("name");
   res.send(locations);
