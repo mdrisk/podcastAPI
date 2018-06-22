@@ -2231,31 +2231,13 @@ const objverbs = [
   "Use"
 ];
 
-const grouping ={
-  {
-    collectionName: "locArray",
-    locArray: locArray
-  },
-  {
-    collectionName: "locationAdj",
-    locationAdj: locadj
-  },
-  {
-    collectionName: "peepAdj",
-    peepAdj: peepadj
-  },
-  {
-    collectionName: "race",
-    race: race
-  },
-  {
-    collectionName: "occupation",
-    occupation: occupation
-  },
-  {
-    collectionName: "objverbs",
-    objverbs: objverbs
-  }
+const grouping = {
+  locArray: locArray,
+  locadj: locadj,
+  peepadj: peepAdj,
+  race: race,
+  occupation: occupation,
+  objverbs: objverbs
 };
 
 router.get("/", async (req, res) => {
