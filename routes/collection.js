@@ -2264,10 +2264,10 @@ router.put("/:id", async (req, res) => {
   const name = obj.category;
   console.log(name);
   const arr = req.body.arr;
-  obj.name = arr;
+  obj[name] = arr;
   console.log(obj);
   await obj.save();
-  res.send(name);
+  res.send(obj);
 });
 // //get one
 // router.get("/:id", async (req, res) => {
