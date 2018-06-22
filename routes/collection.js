@@ -2259,7 +2259,7 @@ router.get("/populate", async (req, res) => {
 });
 
 //delete
-router.delete("/:id", async (req, res) => {
+router.put("/:id", async (req, res) => {
   const obj = await Collection.findById(req.params.id);
   const name = obj.category;
   console.log(name);
