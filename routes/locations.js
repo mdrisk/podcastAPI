@@ -1078,7 +1078,7 @@ const generatedLists = locArray.map(loc => {
 
 //get all
 router.get("/", async (req, res) => {
-  await Location.collection.remove():
+  await Location.collection.remove();
   await Location.collection.insert(generatedLists);
 
   const locations = await Location.find().sort("name");
