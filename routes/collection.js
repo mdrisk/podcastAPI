@@ -2234,7 +2234,7 @@ const objverbs = [
 const grouping = [
   {
     collectionName: "locArray",
-    locArray: locadj
+    locArray: locArray
   },
   {
     collectionName: "locationAdj",
