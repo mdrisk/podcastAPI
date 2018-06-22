@@ -2260,7 +2260,7 @@ router.get("/populate", async (req, res) => {
 
 //delete
 router.put("/:id", async (req, res) => {
-  const obj = await Collection.collections.findById(req.params.id);
+  const obj = await Collection.findById(req.params.id);
   const name = obj.category;
   console.log(name);
   const arr = req.body.arr;
