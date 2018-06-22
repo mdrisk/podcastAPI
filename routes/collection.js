@@ -2261,13 +2261,13 @@ router.get("/populate", async (req, res) => {
 //delete
 router.put("/:id", async (req, res) => {
   const obj = await Collection.findById(req.params.id);
-  const name = obj.category;
+  const name = obj["category"];
   console.log(name);
   const arr = req.body.arr;
   obj[name] = arr;
   console.log(obj);
   await obj.save();
-  res.send(obj);
+  res.send(name);
 });
 // //get one
 // router.get("/:id", async (req, res) => {
