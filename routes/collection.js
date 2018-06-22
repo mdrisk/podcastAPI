@@ -2263,13 +2263,9 @@ router.put("/:id", async (req, res) => {
   const obj = await Collection.findById(req.params.id);
   if (!obj) return res.status(404).send("collection not found");
 
-  const collection = await Collection.findByIdAndUpdate(
-    req.params.id,
-    {
-      list: req.body.arr
-    },
-    { new: true }
-  );
+  const collection = await Collection.findByIdAndUpdate(req.params.id, {
+    list: req.body.arr
+  });
 
   res.send(obj);
 });
