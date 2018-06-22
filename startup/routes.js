@@ -9,7 +9,12 @@ module.exports = function(app) {
       "Access-Control-Allow-Headers",
       "Origin, X-Requested-With, Content-Type, Accept"
     );
+    res.header(
+      "Access-Control-Allow-Methods",
+      "PUT, POST, GET, DELETE, OPTIONS"
+    );
     next();
   });
+
   app.use("/api/collection", collection);
 };
