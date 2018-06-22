@@ -2261,11 +2261,10 @@ router.get("/populate", async (req, res) => {
 //delete
 router.put("/:id", async (req, res) => {
   const obj = await Collection.findById(req.params.id);
-
+  const cat = obj.category;
   const collection = await Collection.findByIdAndUpdate(
     req.params.id,
     {
-      category: obj.category,
       list: req.body.arr
     },
     { new: true }
