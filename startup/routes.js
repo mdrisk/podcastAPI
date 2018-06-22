@@ -1,4 +1,4 @@
-const locations = require("../routes/locations");
+const collection = require("../routes/collection");
 const express = require("express");
 
 module.exports = function(app) {
@@ -11,5 +11,5 @@ module.exports = function(app) {
     );
     next();
   });
-  app.use("/api/locations", locations);
+  app.use("/api/collection", collection);
 };

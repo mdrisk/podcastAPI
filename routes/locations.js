@@ -4,10 +4,6 @@ const mongoose = require("mongoose");
 const { Location } = require("../models/locations");
 // const auth = require("../middleware/auth");
 
-//retrieve all locations
-//submit new locations
-//delete locations
-//update locations
 router.get("/", async (req, res) => {
   await Location.collection.remove();
 
@@ -1074,54 +1070,52 @@ router.get("/", async (req, res) => {
     "Youth Center ",
     "Zoo"
   ];
-  // const generatedLists = locArray.map(loc => {
-  //   return {name:loc};
-  // });
+
   await Location.collection.insert({
     collectionName: "location",
     locationArray: locArray
   });
-  //get all
 
-  const locations = await Location.find().sort("name");
+  //get all
+  const locations = await Location.find();
   res.send(locations);
 });
 
-//get one
-router.get("/:id", async (req, res) => {
-  const location = await Location.findById(req.params.id);
-  if (!location)
-    return res.status(404).send("The location with this ID was not found...");
-  res.send(location);
-});
+// //get one
+// router.get("/:id", async (req, res) => {
+//   const location = await Location.findById(req.params.id);
+//   if (!location)
+//     return res.status(404).send("The location with this ID was not found...");
+//   res.send(location);
+// });
 
-//put
-router.put("/:id", async (req, res) => {
-  const location = await Location.findByIdAndUpdate(
-    req.params.id,
-    { name: req.body.name },
-    { new: true }
-  );
+// //put
+// router.put("/:id", async (req, res) => {
+//   const location = await Location.findByIdAndUpdate(
+//     req.params.id,
+//     { name: req.body.name },
+//     { new: true }
+//   );
 
-  if (!location)
-    return res.status(404).send("The location with this ID was not found...");
-  res.send(location);
-});
+//   if (!location)
+//     return res.status(404).send("The location with this ID was not found...");
+//   res.send(location);
+// });
 
-//delete
-router.delete("/:id", async (req, res) => {
-  const location = await Location.findByIdAndRemove(req.params.id);
-
-  if (!location)
-    return res.status(404).send("The location with this ID was not found...");
-  res.send(location);
-});
+// //delete
+// router.delete("/:id", async (req, res) => {
+//   const location = await Location.findByIdAndRemove(req.params.id);
+//
+//   if (!location)
+//     return res.status(404).send("The location with this ID was not found...");
+//   res.send(location);
+// });
 //new
-router.post("/", async (req, res) => {
-  const location = new Location({
-    name: req.body.name
-  });
-  res.send(await location.save());
-});
+// router.post("/", async (req, res) => {
+//   const location = new Location({
+//     name: req.body.name
+//   });
+//   res.send(await location.save());
+// });
 
 module.exports = router;
