@@ -2264,8 +2264,7 @@ router.put("/:id", async (req, res) => {
     { _id: req.params.id },
     {
       $set: { list: req.body.arr }
-    },
-    { new: true }
+    }
   );
   if (!coll) return res.status(404).send("collection not updated");
   res.send(coll);
