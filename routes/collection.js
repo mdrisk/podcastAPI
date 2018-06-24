@@ -2269,8 +2269,9 @@ router.put("/:id", async (req, res) => {
     }
   });
   const newColl = await Collection.findById(req.params.id);
-  res.send(newColl);
+  res.send("Collection updated");
 });
+
 // //get one
 // router.get("/:id", async (req, res) => {
 //   const location = await Location.findById(req.params.id);
@@ -2290,14 +2291,6 @@ router.put("/:id", async (req, res) => {
 //   if (!location)
 //     return res.status(404).send("The location with this ID was not found...");
 //   res.send(location);
-// });
-
-//new
-// router.post("/", async (req, res) => {
-//   const location = new Location({
-//     name: req.body.name
-//   });
-//   res.send(await location.save());
 // });
 
 module.exports = router;
