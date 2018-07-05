@@ -2291,7 +2291,7 @@ const grouping = [
   { category: "race", list: race },
   { category: "occupation", list: occupation },
   { category: "objVerbs", list: objVerbs },
-  { category: "twists", list: twist }
+  { category: "twists", list: twists }
 ];
 
 router.get("/", async (req, res) => {
