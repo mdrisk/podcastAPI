@@ -2231,13 +2231,67 @@ const objVerbs = [
   "Use"
 ];
 
+const twists = [
+  "Someone important to the action is poisoned. ",
+  "Give a minor character an unshakeable faith in something that the main character doesn't believe in. How does this set them at odds?",
+  "A case of mistaken identity: Someone mistakes your main character for an important cultural icon, a known villain, a spy, or someone from their past. Shenanigans ensue... ",
+  "The place that your character was just traveling toward--whether it was the kitchen, the school, or another city--suddenly no longer exists.",
+  "Startling, direction-altering information is brought to your characters' attention by ... an animal.  ",
+  "The next step for your main characters is revealed to one of them, with crystal clarity, in a dream. Only ... it turns out that the dream was wrong.",
+  "Your character is locked in a prison of some kind. The only way to get the key is by singing. ",
+  "Set an important scene in an art museum. One of the paintings or sculptures reminds your character of something important, long forgotten.",
+  "A rumor gathers momentum and ugliness. It soon divides your main character from her allies.",
+  "The only one they can trust right now is a con man.",
+  "A coin toss takes on tremendous importance. ",
+  "A character is suddenly inducted into a secret society. Will the other members of the society be the worst sort of antagonists, or unexpected allies?",
+  "It was the last thing they ever expected to find in the kitchen.",
+  "What character does your protagonist most revere? And what happens when she finds out that that character isn't all she thought?",
+  "An unexpected gift seems like a wonderful present at first. But it quickly becomes a source of damage, chaos, and grief.  ",
+  "The only one who (grudgingly) agrees with your main character is his least favorite person. Now they'll have to work together.",
+  "Their next bit of insight, or their next clue, comes from an important historic figure.",
+  "Your characters have to escape into a garden... Which, it turns out, is full of something other than flowers and plants. ",
+  "There's a word no one should say. Or a name that no one will mention. A place nobody talks about. Or a proverb that no one repeats. ... Except for your main character, who totally goes for it.",
+  "Two characters fight over where they're each going to sit. It gets out of hand ... fast.",
+  "The next calm scene is interrupted by water: a flood, a leak, rain coming through the windows, an overflowing bathtub, a spilled teacup... ",
+  "Some part of your character's life, something she has taken for granted all this time, turns out to be a message for her, in code.",
+  "Someone from the character's past shows up out of the blue, intent on revenge.",
+  "No one's ever eavesdropped quite like this before... Your character is forced to stay in a painful or precarious position to hear what he desperately needs to know. ",
+  "Some part of your cast now has to rely on an unusual (for them, at least) method of travel. A reindeer, or hot air balloon, or roller skates... ",
+  "Your characters are somehow forced to interrupt a funeral. One of the mourners provides them with unexpected wisdom.",
+  "Your villain becomes obsessed with knock-knock jokes. Her alarmed second-in-command plots a coup.",
+  "They unexpectedly find their dream house. And it changes everything. ",
+  "Just when they couldn't slow down, your characters get caught in a local celebration, festival, or holiday. ",
+  "That terrible fear that your main character has been nursing, and having nightmares about... Yeah. If he doesn't face it now, he'll lose everything.",
+  "An essential character steadily refuses to talk to your main character. For reasons that no one can understand. (Yet.) ",
+  "They come across a chair with magical or mythical properties. Does your character sit in it, or not?",
+  "Whatever problem your characters are facing, they cure it with salt water: sweat, or tears, or the sea.",
+  "Just when your characters thought they could relax, the roof falls in. (Or a tree limb drops. Or the tent collapses. Or the mine caves in.)",
+  "To stave off certain doom, your character has to invent an elaborate story.",
+  "A minor character falls in love with the worst sort of person for her, at the worst possible time.",
+  "The next stage of your characters' plans are thwarted by a massive insect attack. (Ew.)",
+  "Whatever tool or skill or technology your characters were most relying on--it breaks. It stops working. It's faulty. Now what?",
+  "Something disagreeable surfaces in your protagonist's bowl of soup.",
+  "It turns out that all the old tales about this time of day, or this character, or this place, or this tradition, were true. And that is very bad news.",
+  "Your characters knew that they were running out of time. New information cuts their remaining time in half. This forces your characters to rely on someone they know to be untrustworthy...",
+  "If you haven't killed off a minor character yet... do it. If you have killed one, try resurrecting him, one way or another.",
+  "And then they find an old letter, with terrible implications for them, for what they're about to do, and who they're up against.",
+  "Your characters (either the good guys or the bad guys) interrupt a play, concert, recital, movie, or sporting event, and demand help from the entire audience. ",
+  "Someone falls: through the flooring, through the ice, into quicksand, through the stairs. Wherever they are, the ground gives way.",
+  "Something irresistible tempts your main character, but if she gives in now, she loses everything. How does she fight it?",
+  "A barrier that everyone counted on--whether physical, mental, social, financial or emotional--gives way. In the chaos, what does your character do?",
+  "Time for a natural disaster. Storm, flood, fire, earthquake, avalanche... Send your characters scrambling.",
+  "To move forward, your main character must travel to a place to which he swore he'd never return.",
+  "Your main character risks everything to save someone weaker than herself."
+];
+
 const grouping = [
   { category: "locArray", list: locArray },
   { category: "locAdj", list: locAdj },
   { category: "peepAdj", list: peepAdj },
   { category: "race", list: race },
   { category: "occupation", list: occupation },
-  { category: "objVerbs", list: objVerbs }
+  { category: "objVerbs", list: objVerbs },
+  { category: "twists", list: twist }
 ];
 
 router.get("/", async (req, res) => {
